@@ -1,15 +1,70 @@
 @import "skeleton/normalize";
 @import "skeleton/skeleton";
 
+// Global
+$white: #fff;
+
+* {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5 {
+  font-weight: 600;
+}
+
 body {
   padding-top: 1.5em;
-  padding-bottom: 5.5em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #222;
+  color: $primary;
+  background-color: $white;
 }
 
 header {
   text-align: center;
+  img {
+    max-width: 100px;
+  }
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Home
+.grid {
+  height: 80vh;
+  .item {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    float: left;
+
+    padding: 0.5% 1%;
+
+    .text {
+      text-align: justify;
+      width: 70%;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:nth-child(odd) {
+      padding-right: 0.5%;
+    }
+    &:nth-child(even) {
+      padding-left: 0.5%;
+    }
+    .inner {
+      border: 3px solid $secondary;
+
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
 .deck {
@@ -30,7 +85,7 @@ header {
   height: 90%;
   transition: all 500ms;
   transition-delay: 300ms;
-  background-color: white;
+  background-color: $white;
 
   border-radius: 10px;
 

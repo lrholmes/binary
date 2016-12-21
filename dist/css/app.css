@@ -562,10 +562,10 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #F6A623; }
+  color: #000; }
 
 a:hover {
-  color: #ac6d07; }
+  color: black; }
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -612,8 +612,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #f8ba54;
-  border-color: #f8ba54; }
+  background-color: #1a1a1a;
+  border-color: #1a1a1a; }
 
 .button.button-primary:hover,
 button.button-primary:hover,
@@ -626,8 +626,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #F6A623;
-  border-color: #F6A623; }
+  background-color: #000;
+  border-color: #000; }
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -676,7 +676,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #f8ba54;
+  border: 1px solid #1a1a1a;
   outline: 0; }
 
 label,
@@ -822,14 +822,50 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600; }
+
 body {
   padding-top: 1.5em;
-  padding-bottom: 5.5em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #222; }
+  color: #000;
+  background-color: #fff; }
 
 header {
   text-align: center; }
+  header img {
+    max-width: 100px; }
+
+main {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.grid {
+  height: 80vh; }
+  .grid .item {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    float: left;
+    padding: 0.5% 1%; }
+    .grid .item .text {
+      text-align: justify;
+      width: 70%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .grid .item:nth-child(odd) {
+      padding-right: 0.5%; }
+    .grid .item:nth-child(even) {
+      padding-left: 0.5%; }
+    .grid .item .inner {
+      border: 3px solid #1a1a1a;
+      height: 100%;
+      width: 100%; }
 
 .deck {
   width: 350px;
@@ -845,7 +881,7 @@ header {
   height: 90%;
   transition: all 500ms;
   transition-delay: 300ms;
-  background-color: white;
+  background-color: #fff;
   border-radius: 10px; }
   .card.active {
     top: 3%;

@@ -8,8 +8,9 @@
 */
 
 // colour override
-$primary: #F6A623;
+$primary: #000;
 $secondary: lighten($primary, 10%);
+$text: darken($primary, 20%);
 
 
 

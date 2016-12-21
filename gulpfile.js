@@ -3,11 +3,13 @@ var browserSync = require('browser-sync').create();
 var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
+var fileinclude = require('gulp-file-include');
+var rename = require("gulp-rename");
 
 // process JS files and return the stream.
 gulp.task('js', function () {
     return gulp.src('js/*js')
-        .pipe(browserify())
+        //.pipe(browserify())
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
@@ -18,6 +20,21 @@ gulp.task('sass', function() {
         .pipe(sass())
         .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream());
+});
+
+gulp.task('fileinclude', function(){
+  return gulp.src('*.html')
+        .pipe(fileinclude({
+          prefix: '@@',
+          basepath: '@file'
+          }))
+        .pipe(rename(function(path){
+          if (path.basename !== 'index') {
+            path.dirname += '/' + path.basename;
+            path.basename = 'index'
+          }
+        }))
+        .pipe(gulp.dest('./dist/'));
 });
 
 // create a task that ensures the `js` task is complete before
@@ -33,7 +50,7 @@ gulp.task('serve', ['js', 'sass'], function () {
     // Serve files from the root of this project
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./dist/"
         }
     });
 
