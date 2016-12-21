@@ -21,7 +21,7 @@ $(document).ready(function() {
   // });
 
   recognition.start();
-  console.log('Ready to receive a color command.');
+  console.log('Ready to receive a command.');
 });
 
 
@@ -43,7 +43,7 @@ var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEv
 
 var rights = ['yes', 'yeah', 'yep', 'yup'];
 var lefts = ['no', 'nah', 'nope', 'never'];
-var grammar = '#JSGF V1.0; grammar yes; public <yes> = ' + rights.join(' | ') + ' ;'
+var grammar = '#JSGF V1.0; grammar yes; public <yes> = ' + rights.join(' | ') + lefts.join(' | ')  +' ;'
 
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
@@ -91,10 +91,15 @@ recognition.onresult = function(event) {
   }, 1000)
 }
 
+recognition.onend = function(event) {
+  recognition.start();
+  console.log('Ready to receive a color command.');
+}
+
 recognition.onnomatch = function(event) {
-  diagnostic.textContent = "I didn't recognise that color.";
+  console.log("I didn't recognise that color.");
 }
 
 recognition.onerror = function(event) {
-  diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
+  console.log('Error occurred in recognition: ' + event.error);
 }
