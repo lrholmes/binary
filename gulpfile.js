@@ -44,6 +44,13 @@ gulp.task('js-watch', ['js'], function (done) {
     done();
 });
 
+// create a task that ensures the `js` task is complete before
+// reloading browsers
+gulp.task('html-watch', ['fileinclude'], function (done) {
+    browserSync.reload();
+    done();
+});
+
 // use default task to launch Browsersync and watch JS files
 gulp.task('serve', ['js', 'sass'], function () {
 
@@ -58,4 +65,5 @@ gulp.task('serve', ['js', 'sass'], function () {
     // all browsers reload after tasks are complete.
     gulp.watch("scss/*.scss", ['sass']);
     gulp.watch("js/*.js", ['js-watch']);
+    gulp.watch("**/*.html", ['html-watch']);
 });
