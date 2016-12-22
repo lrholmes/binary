@@ -826,31 +826,60 @@ there.
   box-sizing: border-box; }
 
 h1, h2, h3, h4, h5 {
+  font-family: Optima;
   font-weight: 600; }
 
 body {
-  padding-top: 1.5em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #000;
   background-color: #fff; }
 
 header {
+  height: 120px;
+  padding: 10px;
   text-align: center; }
   header img {
-    max-width: 100px; }
+    max-width: 100px;
+    transition: all 200ms; }
+    header img:hover {
+      filter: invert(100%); }
 
 main {
   max-width: 1200px;
   margin: 0 auto; }
 
+video {
+  position: absolute;
+  top: 0; }
+
+canvas {
+  display: none;
+  position: absolute;
+  bottom: 0; }
+
+#headtrackerMessageDiv {
+  right: 25% !important;
+  bottom: 20px !important;
+  top: auto !important;
+  font-size: 20px !important;
+  left: 25% !important;
+  width: 50%; }
+  #headtrackerMessageDiv div {
+    padding: 2%;
+    color: #000 !important;
+    opacity: 1 !important;
+    background-color: transparent !important; }
+    #headtrackerMessageDiv div p {
+      margin: 0; }
+
 .grid {
-  height: 80vh; }
+  height: calc(100vh - 120px); }
   .grid .item {
     position: relative;
     width: 50%;
     height: 50%;
     float: left;
-    padding: 0.5% 1%; }
+    padding: 0% 1% 1%; }
     .grid .item .text {
       text-align: justify;
       width: 70%;
@@ -864,8 +893,12 @@ main {
       padding-left: 0.5%; }
     .grid .item .inner {
       border: 3px solid #1a1a1a;
+      transition: all 200ms;
       height: 100%;
       width: 100%; }
+      .grid .item .inner:hover {
+        background-color: #1a1a1a;
+        color: #fff; }
 
 .deck {
   width: 350px;
