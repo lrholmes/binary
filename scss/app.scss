@@ -42,12 +42,12 @@ main {
 }
 
 video {
-  position: absolute;
-  top: 0;
+  // position: absolute;
+  // top: 0;
 }
 
 canvas {
-  display: none;
+  pointer-events: none;
   position: absolute;
   bottom: 0;
 }
