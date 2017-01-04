@@ -10,7 +10,7 @@ var rename = require("gulp-rename");
 gulp.task('js', function () {
     return gulp.src('js/*js')
         //.pipe(browserify())
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 

@@ -1,1 +1,78 @@
-var fruits=["Bananas","Apples","Oranges","Raisins","Grapes"],y,initY;$(document).click(function(){console.log(y,initY)}),$(document).ready(function(){for(var e=0;e<fruits.length;e++){var t="card ";e===fruits.length-1&&(t+="active"),$(".deck").append('<div class="'+t+'"><h3>'+fruits[e]+"</h3></div>")}var n=document.querySelector("canvas"),r=document.querySelector("video");htracker.init(r,n),htracker.start();var i=null,a=!1,c=!1,s=!1,o=!1;document.addEventListener("facetrackingEvent",function(e){y=e.y;var t=e.x;null===i&&(initY=y,i=t),(t>i+10||t<i-10)&&(s=!0),t>i-5&&t<i+5&&s&&(o=!0),y>initY-5&&c&&(a=!0),y>initY+20&&(c=!0),a===!0&&c===!0&&(swipe("right"),a=!1,c=!1,s=!1,o=!1),s===!0&&o===!0&&(swipe("left"),s=!1,o=!1,a=!1,c=!1)})});var htracker=new headtrackr.Tracker({smoothing:!0,detectionInterval:20});
+// Sample Data
+var fruits = ['Bananas', 'Apples', 'Oranges', 'Raisins', 'Grapes'];
+var y, initY;
+$(document).click(function(){
+console.log(y, initY);
+});
+
+$(document).ready(function() {
+  // Map data to cards
+  for (var i = 0; i < fruits.length; i++) {
+    var cardClass = "card ";
+    if (i === fruits.length - 1) {
+      // Make the 'top' card (lowest in DOM) active
+      cardClass += "active";
+    }
+    $('.deck').append('<div class="' + cardClass + '"><h3>' + fruits[i] + '</h3></div>');
+  }
+
+  var canvas = document.querySelector('canvas');
+  var video = document.querySelector('video');
+  htracker.init(video,canvas);
+  htracker.start();
+
+  // var initY = null;
+  var initX = null;
+  var gotBack = false;
+  var gotLow = false;
+  var wentSide = false;
+  var wentBack = false;
+  document.addEventListener('facetrackingEvent',
+    function (event) {
+      y = event.y;
+      var x = event.x;
+      if (initX === null) {
+        initY = y;
+        initX = x;
+      }
+      // LEFT/RIGHT
+      if (x > (initX + 10) || x < (initX - 10)) {
+        // user is moving head sidways
+        wentSide = true;
+      }
+      if (x > (initX - 5) && x < (initX + 5) && wentSide) {
+        // user is moving head upwards
+        wentBack = true;
+      }
+      // UP/DOWN
+      if (y > (initY - 5) && gotLow) {
+        // user is moving head upwards
+        gotBack = true;
+      }
+      if (y > (initY + 20)) {
+        // user is moving head downwards
+        gotLow = true;
+      }
+
+      if (gotBack === true && gotLow === true) {
+        swipe('right');
+        gotBack = false;
+        gotLow = false;
+        wentSide = false;
+        wentBack = false;
+      }
+      if (wentSide === true && wentBack === true) {
+        swipe('left');
+        wentSide = false;
+        wentBack = false;
+        gotBack = false;
+        gotLow = false;
+      }
+    }
+  );
+});
+
+var htracker = new headtrackr.Tracker({
+  smoothing: true,
+  detectionInterval: 20
+});

@@ -19,6 +19,10 @@ body {
   background-color: $white;
 }
 
+.button {
+  border-radius: 0;
+}
+
 header {
   height: 120px;
   padding: 10px;
@@ -68,13 +72,26 @@ canvas {
   }
 }
 
+.pre-info {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // Home
+.introduction {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .grid {
-  height: calc(100vh - 120px);
   .item {
     position: relative;
     width: 50%;
-    height: 50%;
+    height: 300px;
     float: left;
 
     padding: 0% 1% 1%;
@@ -87,6 +104,10 @@ canvas {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
+      .button {
+        transition: all 300ms;
+      }
     }
 
     &:nth-child(odd) {
@@ -104,6 +125,15 @@ canvas {
       &:hover {
         background-color: $secondary;
         color: $white;
+
+        .button {
+          background-color: $secondary;
+          color: $white;
+        }
+        .button.button-primary {
+          background-color: $white;
+          color: $secondary;
+        }
       }
     }
   }
@@ -119,6 +149,10 @@ canvas {
   //border: 2px solid grey;
 }
 
+.swipe .card.active {
+  transition-delay: 0ms;
+  transition-duration: 50ms;
+}
 .card {
   position: absolute;
   top: 5%;
