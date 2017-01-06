@@ -851,8 +851,26 @@ main {
   max-width: 1200px;
   margin: 0 auto; }
 
+video.float {
+  position: absolute;
+  top: 10px;
+  left: 10px; }
+
+#webgazerVideoCanvas {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+  z-index: -10;
+  transform: scaleX(-1);
+  filter: FlipH; }
+
 canvas {
   pointer-events: none;
+  opacity: 0;
   position: absolute;
   bottom: 0; }
 
