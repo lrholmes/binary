@@ -33,7 +33,7 @@ document.addEventListener('facetrackingEvent',
     if (initX === null) {
       initX = x;
     }
-    if (tracking) {
+    if (trackingNow) {
       if (x < (initX - 40)) {
         // right
         console.log(x, initX);

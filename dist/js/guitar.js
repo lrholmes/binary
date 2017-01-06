@@ -107,7 +107,7 @@ function interpret_correlation_result(event)
 		document.getElementById("note-name").textContent = dominant_frequency.name;
 		document.getElementById("frequency").textContent = dominant_frequency.frequency;
     if (trackingNow) {
-      if (dominant_frequency.frequency > 280) {
+      if (dominant_frequency.frequency > 260) {
         stopTracking();
         swipe('right');
       }

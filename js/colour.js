@@ -56,7 +56,7 @@ $('video').click(function(e){
     });
 
     var colours = new tracking.ColorTracker(['green', 'red']);
-
+    stopTracking(3000);
     colours.on('track', function(event) {
       if (trackingNow) {
         if (event.data.length === 0) {
@@ -73,6 +73,7 @@ $('video').click(function(e){
     });
 
     tracking.track('#vid', colours, {camera:true});
+    $('video').appendTo('body').addClass('float');
     init();
   } else {
     // it is false, so get green
