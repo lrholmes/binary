@@ -1,19 +1,10 @@
 
 // VOICE RECOGNITION -- START
-// Sample Data
-var fruits = ['Bananas', 'Apples', 'Oranges', 'Raisins', 'Grapes'];
 
 $(document).ready(function() {
   // Map data to cards
-  for (var i = 0; i < fruits.length; i++) {
-    var cardClass = "card ";
-    if (i === fruits.length - 1) {
-      // Make the 'top' card (lowest in DOM) active
-      cardClass += "active";
-    }
-    $('.deck').append('<div class="' + cardClass + '"><h3>' + fruits[i] + '</h3></div>');
-  }
 
+  init(true);
   recognition.start();
 });
 

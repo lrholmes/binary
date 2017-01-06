@@ -5,14 +5,7 @@ var initX = null;
 
 $(document).ready(function() {
   // Map data to cards
-  for (var i = 0; i < fruits.length; i++) {
-    var cardClass = "card ";
-    if (i === fruits.length - 1) {
-      // Make the 'top' card (lowest in DOM) active
-      cardClass += "active";
-    }
-    $('.deck').append('<div class="' + cardClass + '"><h3>' + fruits[i] + '</h3></div>');
-  }
+  init();
 
   var canvas = document.querySelector('canvas');
   var video = document.querySelector('video');
