@@ -1,6 +1,3 @@
-// Sample Data
-var fruits = ['Bananas', 'Apples', 'Oranges', 'Raisins', 'Grapes'];
-
 var initX = null;
 
 $(document).ready(function() {

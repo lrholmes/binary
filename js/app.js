@@ -6,17 +6,24 @@ var deckType = 'tidy';
 if (deckCookie !== "") {
   deckType = deckCookie;
   $('#'+deckType).addClass('button-primary');
+} else {
+  $('#tidy').addClass('button-primary');
 }
 
-var fruits = ['Bananas', 'Apples', 'Oranges', 'Raisins', 'Grapes'];
+var fruits = ['Bananas', 'Apples', 'Oranges', 'Strawberries', 'Grapes', 'Pineapple', 'Kiwi', 'Melon', 'Peaches'];
 
 // Triggered by voice command, will send a card left or right
-function swipe(direction) {
+function swipe(direction, needsReady) {
   var $card = $('.card:last-child');
 
   $card.addClass('exit-' + direction);
   // make next card in stack active
   $card.prev().addClass('active').removeAttr('style');
+  if (needsReady) {
+    window.setTimeout(function(){
+      $card.prev().addClass('ready');
+    }, needsReady);
+  }
   window.setTimeout(function(){
     // remove self from dom after animation is complete
     $card.remove();
@@ -53,7 +60,7 @@ function init(messy) {
     var cardClass = "card ";
     if (i === fruits.length - 1) {
       // Make the 'top' card (lowest in DOM) active
-      cardClass += "active";
+      cardClass += "active ready";
     }
     var style = {};
     if (messy && i !== fruits.length - 1) {

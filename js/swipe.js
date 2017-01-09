@@ -29,18 +29,18 @@ function updatePosition(e) {
   if (trackingNow) {
     x += e.movementX;
     y += e.movementY;
-    $('.card.active').css('transform', 'translate(' + x + 'px,' + y + 'px)');
+    $('.card.ready').css('transform', 'translate(' + x + 'px,' + y + 'px)');
 
     if (x > 200) {
       stopTracking(400);
-      swipe('right');
+      swipe('right', 400);
       checkEnd()
       x = 0;
       y = 0;
     }
     if (x < -200) {
       stopTracking(400);
-      swipe('left');
+      swipe('left', 400);
       checkEnd()
       x = 0;
       y = 0;
