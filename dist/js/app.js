@@ -3,6 +3,7 @@ var begin = false;
 
 var deckCookie = getCookie('deckType');
 var deckType = 'tidy';
+console.log('deckcookie,', deckCookie);
 if (deckCookie !== "") {
   deckType = deckCookie;
   $('#'+deckType).addClass('button-primary');
@@ -11,6 +12,30 @@ if (deckCookie !== "") {
 }
 
 var fruits = ['Bananas', 'Apples', 'Oranges', 'Strawberries', 'Grapes', 'Pineapple', 'Kiwi', 'Melon', 'Peaches'];
+
+var itemData = {
+  'swipe': {
+    title: 'Swipe',
+    video: 'swipe.mp4',
+    desc: 'This interaction aims to provide context to the audience by closely replicating the Tinder swiping experience. This is achieved by replacing the mouse cursor functionality with direct control of the cards, so as a user moves their finger on the computer’s trackpad, this movement is emulated on-screen. Once the user passes the card past the left or right threshold, it will continue to be dismissed off-screen in that direction. Despite not having the visual finger-to-element connection that a touchscreen enables, this interaction does work to provide a simple application of Mine’s concept - removing the need to interact with abstract interface elements can increase the sense of immersion.'
+  }
+};
+
+$('.modal--button').click(function() {
+  var item = $(this).attr('data-modal');
+
+  $('#modal #modal--title').text(itemData[item].title);
+  $('#modal #modal--video').attr('src', '/videos/' + itemData[item].video);
+  $('#modal #modal--description').text(itemData[item].desc);
+
+  $('main').fadeOut(400);
+  $('#modal').fadeIn(400);
+});
+
+$('#dismiss').click(function(){
+  $('main').fadeIn(400);
+  $('#modal').fadeOut(400);
+});
 
 // Triggered by voice command, will send a card left or right
 function swipe(direction, needsReady) {
@@ -53,7 +78,14 @@ function init(messy) {
   $('.deck').fadeIn('slow');
 
   if (messy) {
+    $('.tidy-deck-container').show();
     $('.deck').addClass('messy');
+    $('#tidy-deck').click(function(){
+      $('.deck').removeClass('messy');
+      $('.card').each(function(){
+        $(this).removeAttr('style');
+      });
+    });
   }
   // Map data to cards
   for (var i = 0; i < fruits.length; i++) {

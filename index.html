@@ -17,7 +17,7 @@
               <h2>Swipe</h2>
               <p>Use your trackpad to make decisions with finger-based gestures.</p>
               <a class="button button-primary" href="/swipe/">Begin</a>
-              <a class="button" href="#">Video & Information</a>
+              <button data-modal="swipe" class="modal--button button">Video & Information</button>
             </div>
           </div>
       </div>
@@ -42,11 +42,31 @@
         </a>
       </div>
       <div class="item">
+        <a href="/sway/">
+          <div class="inner">
+            <div class="text">
+              <h2>Sway</h2>
+              <p>Lean to indicate the direction you'd like the card to go.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="item">
         <a href="/head/">
           <div class="inner">
             <div class="text">
               <h2>Head</h2>
               <p>Use shaking and nodding gestures to make  your decision.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a href="/eyes/">
+          <div class="inner">
+            <div class="text">
+              <h2>Eyes</h2>
+              <p>Use your eyes to indicate the direction of the cards.</p>
             </div>
           </div>
         </a>
@@ -71,28 +91,18 @@
           </div>
         </a>
       </div>
-      <div class="item">
-        <a href="/sway/">
-          <div class="inner">
-            <div class="text">
-              <h2>Sway</h2>
-              <p>Lean to indicate the direction you'd like the card to go.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="item">
-        <a href="/eyes/">
-          <div class="inner">
-            <div class="text">
-              <h2>Eyes</h2>
-              <p>Use your eyes to indicate the direction of the cards.</p>
-            </div>
-          </div>
-        </a>
-      </div>
     </div>
   </main>
+  <div id="modal" style="display:none;">
+    <div id="dismiss">&times;</div>
+    <div class="modal--inner">
+      <h2 id="modal--title">Swipe</h2>
+      <video controls id="modal--video" src=""></video>
+      <p id="modal--description">
+        This interaction aims to provide context to the audience by closely replicating the Tinder swiping experience. This is achieved by replacing the mouse cursor functionality with direct control of the cards, so as a user moves their finger on the computer’s trackpad, this movement is emulated on-screen. Once the user passes the card past the left or right threshold, it will continue to be dismissed off-screen in that direction. Despite not having the visual finger-to-element connection that a touchscreen enables, this interaction does work to provide a simple application of Mine’s concept - removing the need to interact with abstract interface elements can increase the sense of immersion.
+      </p>
+    </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="/js/app.js"></script>
 @@include('layout/bottom.html')
