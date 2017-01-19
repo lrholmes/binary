@@ -22,7 +22,7 @@ var itemData = {
   'voice': {
     title: 'Voice',
     video: 'swipe.mp4',
-    desc: 'This interaction aims to provide context to the audience by closely replicating the Tinder swiping experience. This is achieved by replacing the mouse cursor functionality with direct control of the cards, so as a user moves their finger on the computer’s trackpad, this movement is emulated on-screen. Once the user passes the card past the left or right threshold, it will continue to be dismissed off-screen in that direction. Despite not having the visual finger-to-element connection that a touchscreen enables, this interaction does work to provide a simple application of Mine’s concept - removing the need to interact with abstract interface elements can increase the sense of immersion.'
+    desc: 'This interaction allows users to manipulate the direction of the card by using words. Following the positive/negative association with swiping left and right, words that are similar to ‘yes’ will cause the card to go right, and words similar to ‘no’ will do the opposite. This work is an interesting departure from physicality in the typical understanding of the word as it in some ways is less ‘physical’ than normal methods of input.'
   }
 };
 
