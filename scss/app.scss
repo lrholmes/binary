@@ -79,6 +79,11 @@ canvas {
   bottom: 0;
 }
 
+.fixed {
+  height: 100%;
+  overflow: hidden;
+}
+
 .tidy-container {
   position: relative;
   z-index: 100;
@@ -105,6 +110,43 @@ canvas {
     right: 20px;
     font-size: 70px;
     line-height: 0;
+  }
+  .modal--button {
+    min-width: 150px;
+    padding: 10px 20px;
+    background-color: $primary;
+    color: $white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    h5 {
+      margin: 0;
+    }
+
+    &::before {
+      content: '➤';
+      position: absolute;
+      top: 17px;
+    }
+  }
+  #prev {
+    left: 0;
+    text-align: right;
+    &::before {
+      transform: rotate(180deg);
+      left: 20px;
+    }
+  }
+  #next {
+    right: 0;
+    &::before {
+      right: 20px;
+    }
+  }
+  #counter {
+    display: block;
+    text-align: center;
   }
   .modal--inner {
     position: absolute;
@@ -154,6 +196,11 @@ canvas {
 .messy-select {
   text-align: center;
   margin-bottom: 2.5rem;
+  p {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .switch {
   input {
@@ -199,19 +246,19 @@ canvas {
       height: 100%;
       width: 100%;
 
-      &:hover {
-        background-color: $secondary;
-        color: $white;
-
-        .button {
-          background-color: $secondary;
-          color: $white;
-        }
-        .button.button-primary {
-          background-color: $white;
-          color: $secondary;
-        }
-      }
+      // &:hover {
+      //   background-color: $secondary;
+      //   color: $white;
+      //
+      //   .button {
+      //     background-color: $secondary;
+      //     color: $white;
+      //   }
+      //   .button.button-primary {
+      //     background-color: $white;
+      //     color: $secondary;
+      //   }
+      // }
     }
   }
 }
