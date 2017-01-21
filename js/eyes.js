@@ -1,5 +1,4 @@
 // Sample Data
-var fruits = ['Bananas', 'Apples', 'Oranges', 'Raisins', 'Grapes'];
 var clicks = 0;
 
 var docWidth = $(document).width();

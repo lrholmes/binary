@@ -877,6 +877,10 @@ canvas {
   position: absolute;
   bottom: 0; }
 
+.fixed {
+  height: 100%;
+  overflow: hidden; }
+
 .tidy-container {
   position: relative;
   z-index: 100;
@@ -900,6 +904,34 @@ canvas {
     right: 20px;
     font-size: 70px;
     line-height: 0; }
+  #modal .modal--button {
+    min-width: 150px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer; }
+    #modal .modal--button h5 {
+      margin: 0; }
+    #modal .modal--button::before {
+      content: '➤';
+      position: absolute;
+      top: 17px; }
+  #modal #prev {
+    left: 0;
+    text-align: right; }
+    #modal #prev::before {
+      transform: rotate(180deg);
+      left: 20px; }
+  #modal #next {
+    right: 0; }
+    #modal #next::before {
+      right: 20px; }
+  #modal #counter {
+    display: block;
+    text-align: center; }
   #modal .modal--inner {
     position: absolute;
     top: 50%;
@@ -938,6 +970,10 @@ canvas {
 .messy-select {
   text-align: center;
   margin-bottom: 2.5rem; }
+  .messy-select p {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto; }
 
 .switch input {
   display: none; }
@@ -969,15 +1005,6 @@ canvas {
     transition: all 200ms;
     height: 100%;
     width: 100%; }
-    .grid .item .inner:hover {
-      background-color: #1a1a1a;
-      color: #fff; }
-      .grid .item .inner:hover .button {
-        background-color: #1a1a1a;
-        color: #fff; }
-      .grid .item .inner:hover .button.button-primary {
-        background-color: #fff;
-        color: #1a1a1a; }
 
 .deck {
   width: 350px;

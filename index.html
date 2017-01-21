@@ -19,6 +19,7 @@
     <p class="introduction">An exploration of the possible interactions for <b>Binary Decision Making</b> processes.</p>
     <div class="messy-select">
       <h5>Deck Type</h5>
+      <p>The card-based interface helps us to <b>concentrate</b> on the current decision at hand. Enable the <i>messy</i> deck type to become aware importance of this, as the cards become randomly scattered across the page.</p>
       <span id="tidy" class="button">Tidy</span>
       <!-- <div class="switch">
         <input id="switch-1" type="checkbox" class="switch-input">
@@ -42,76 +43,79 @@
             <div class="text">
               <h2>Voice</h2>
               <p>Use your voice and make decisions with words like 'yes' and 'no'.</p>
-              <a class="button button-primary" href="/swipe/">Begin</a>
+              <a class="button button-primary" href="/voice/">Begin</a>
               <button data-modal="voice" class="modal--button button">Video & Information</button>
             </div>
           </div>
       </div>
       <div class="item">
-        <a href="/hands/">
           <div class="inner">
             <div class="text">
               <h2>Hands</h2>
               <p>Use swiping motions with your hands to flick the cards towards your decision.</p>
+              <a class="button button-primary" href="/hands/">Begin</a>
+              <button data-modal="hands" class="modal--button button">Video & Information</button>
             </div>
           </div>
-        </a>
       </div>
       <div class="item">
-        <a href="/sway/">
           <div class="inner">
             <div class="text">
               <h2>Sway</h2>
               <p>Lean to indicate the direction you'd like the card to go.</p>
+              <a class="button button-primary" href="/sway/">Begin</a>
+              <button data-modal="sway" class="modal--button button">Video & Information</button>
             </div>
           </div>
-        </a>
       </div>
       <div class="item">
-        <a href="/head/">
-          <div class="inner">
-            <div class="text">
-              <h2>Head</h2>
-              <p>Use shaking and nodding gestures to make  your decision.</p>
-            </div>
+        <div class="inner">
+          <div class="text">
+            <h2>Head</h2>
+            <p>Use shaking and nodding gestures to make  your decision.</p>
+            <a class="button button-primary" href="/head/">Begin</a>
+            <button data-modal="head" class="modal--button button">Video & Information</button>
           </div>
-        </a>
+        </div>
       </div>
       <div class="item">
-        <a href="/eyes/">
-          <div class="inner">
-            <div class="text">
-              <h2>Eyes</h2>
-              <p>Use your eyes to indicate the direction of the cards.</p>
-            </div>
+        <div class="inner">
+          <div class="text">
+            <h2>Eyes</h2>
+            <p>Use your eyes to indicate the direction of the cards.</p>
+            <a class="button button-primary" href="/eyes/">Begin</a>
+            <button data-modal="eyes" class="modal--button button">Video & Information</button>
           </div>
-        </a>
+        </div>
       </div>
       <div class="item">
-        <a href="/colour/">
           <div class="inner">
             <div class="text">
               <h2>Colour</h2>
               <p>Use green or red coloured objects to indicate your decision.</p>
+              <a class="button button-primary" href="/colour/">Begin</a>
+              <button data-modal="colour" class="modal--button button">Video & Information</button>
             </div>
           </div>
-        </a>
       </div>
       <div class="item">
-        <a href="/guitar/">
-          <div class="inner">
-            <div class="text">
-              <h2>Guitar</h2>
-              <p>Use the high and low notes on a guitar to make your decision.</p>
-            </div>
+        <div class="inner">
+          <div class="text">
+            <h2>Guitar</h2>
+            <p>Use the high and low notes on a guitar to make your decision.</p>
+            <a class="button button-primary" href="/guitar/">Begin</a>
+            <button data-modal="guitar" class="modal--button button">Video & Information</button>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </main>
   <div id="modal" style="display:none;">
     <div id="dismiss">&times;</div>
+    <div class="modal--button" id="prev"><h5></h5></div>
+    <div class="modal--button" id="next"><h5></h5></div>
     <div class="modal--inner">
+      <span id="counter"></span>
       <h2 id="modal--title">Swipe</h2>
       <video controls id="modal--video" src=""></video>
       <p id="modal--description">
