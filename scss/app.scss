@@ -85,8 +85,14 @@ header {
   float: none;
 }
 .colophon {
+  text-align: justify;
+  display: inline-block;
+  width: 100%;
   padding-top: 3vh;
   padding-bottom: 12.5vh;
+}
+.by {
+  text-align: right;
 }
 .overview {
   padding-top: 3vh;
@@ -214,7 +220,6 @@ canvas {
   }
   #counter {
     display: block;
-    text-align: center;
   }
   .modal--inner {
     position: absolute;
