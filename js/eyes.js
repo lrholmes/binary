@@ -7,6 +7,7 @@ $(document).click(function() {
   if (clicks > 3) {
     $('#click-count').text('5');
     $('.buttons').fadeIn('400');
+    $('#webgazerVideoCanvas').css('opacity', 0);
   } else {
     clicks++;
     $('#click-count').text(clicks);

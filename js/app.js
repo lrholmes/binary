@@ -21,37 +21,37 @@ var itemData = {
   },
   'voice': {
     title: 'Voice',
-    video: 'swipe.mp4',
+    video: 'voice.mp4',
     desc: 'This interaction allows users to manipulate the direction of the card by using words. Following the positive/negative association with swiping left and right, words that are similar to ‘yes’ will cause the card to go right, and words similar to ‘no’ will do the opposite. This work is an interesting departure from physicality in the typical understanding of the word as it in some ways is less ‘physical’ than normal methods of input.'
   },
   'hands': {
     title: 'Hands',
-    video: 'swipe.mp4',
+    video: 'hands.mp4',
     desc: 'This interaction takes users\' hands away from the computer, and allows them to \'flick\' the cards in either direction with a swipe-like gesture. This feels similar to Tinder\'s swiping in a way that is different to the \'Swipe\' interaction - from the point of view of the user, the hand crosses over the card in a way that is similar to using the finger in Tinder\'s swiping interface. This creates the perceived feeling that the user is directly interacting with the onscreen element, instead of an in-between interface (such as a trackpad).'
   },
   'sway': {
     title: 'Sway',
-    video: 'swipe.mp4',
+    video: 'sway.mp4',
     desc: 'This interaction allows the user to embody the movement of the card itself, by mimicing the direction they\'d like it to go with the whole body. This interaction employs the concept of \'kinaesthetic correspondence\' as the card will follow the user as they sway in either direction.'
   },
   'head': {
     title: 'Head',
-    video: 'swipe.mp4',
+    video: 'head.mp4',
     desc: 'A head nod is widely regarded as a signal for acceptance, and similarly, a head shaking gesture signifies rejection. These are seemingly natural responses used in everyday conversation as a part of body language. This interaction enables users to utilise these gestures in decision-making, see if they feel equally natural in a human-computer interface as they do in a human-human interface.'
   },
   'eyes': {
     title: 'Eyes',
-    video: 'swipe.mp4',
+    video: 'eyes.mp4',
     desc: 'Eye tracking is often used as a means of analysing user behaviour by studying where users\' eyes are drawn while they are using an interface. In this interaction, rather, eye tracking is used as the method of control, allowing users to simply look in the direction they want the card to go. After adapting to the mechanism the user may be able to choose very quickly, by allowing instinct to direct their gaze after having seen the content on the card.'
   },
   'colour': {
     title: 'Colour',
-    video: 'swipe.mp4',
+    video: 'colour.mp4',
     desc: 'In this interaction, the user is asked to identify two objects - one red to indicate a swipe left, and one green to indicate a swipe right. The user simply must present the object to make their decision, which in effect passes the physicality over to the user. There are no instructions on what to do, so a user can do anything they like with regards to their method of displaying the object.'
   },
-  'guitar': {
-    title: 'Guitar',
-    video: 'swipe.mp4',
+  'sound': {
+    title: 'Sound',
+    video: 'guitar.mp4',
     desc: 'This interaction invites users to make their decision using a musical instrument. The frequency of sound is tracked, so in theory any instrument would work, but this has been tested with a guitar. Users can strike the top or bottom note in order to choose. The low frequency note has been associated with the left swipe, in accordance with the ominous connotation that it seems to hold, and because of that the high frequency note indicates a swipe right.'
   },
 };
