@@ -32,7 +32,7 @@ var itemData = {
   'sway': {
     title: 'Sway',
     video: 'sway.mp4',
-    desc: 'This interaction allows the user to embody the movement of the card itself, by mimicing the direction they\'d like it to go with the whole body. This interaction employs the concept of \'kinaesthetic correspondence\' as the card will follow the user as they sway in either direction.'
+    desc: 'This interaction allows the user to embody the card itself, by mimicing the direction they\'d like it to go with the whole body. This interaction employs the concept of \'kinaesthetic correspondence\' (Britton et al. 1978) as the card will follow the user as they sway in either direction.'
   },
   'head': {
     title: 'Head',
@@ -52,7 +52,7 @@ var itemData = {
   'sound': {
     title: 'Sound',
     video: 'guitar.mp4',
-    desc: 'This interaction invites users to make their decision using a musical instrument. The frequency of sound is tracked, so in theory any instrument would work, but this has been tested with a guitar. Users can strike the top or bottom note in order to choose. The low frequency note has been associated with the left swipe, in accordance with the ominous connotation that it seems to hold, and because of that the high frequency note indicates a swipe right.'
+    desc: 'This interaction invites users to make their decision using a musical instrument. The frequency of sound is tracked, so in theory any instrument would work, but this has been tested with a guitar. Users can strike the top or bottom note in order to choose, or as in the demonstration video, play full chords. The low frequency note has been associated with the left swipe, in accordance with the ominous connotation that it seems to hold, and because of that the high frequency note indicates a swipe right.'
   },
 };
 
