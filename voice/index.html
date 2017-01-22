@@ -7,16 +7,22 @@
   <title>Decisions</title>
   <link rel="stylesheet" href="/css/app.css">
 </head>
-<body>
+<body class="@@class">
   <header>
-    <a href="/"><img src="/img/logo4.png" alt="Binary"></a>
+      <a class="logo" href="/"><img src="/img/logo4.png" alt="Binary"></a>
+      <a class="wide-logo" href="/"><img src="/img/logo-wide.png" alt="Binary"></a>
   </header>
   <div class="tidy-container" style="display:none;">
     <button id="tidy-deck">Tidy Deck</button>
   </div>
 
   <main>
-    <div class="deck">
+    <div class="pre-info">
+      <h3>Voice</h3>
+      <p>Click on the button below to begin. Use words like 'yes' and 'no' to make you decision.</p>
+      <button class="button button-primary begin tidy">Begin with tidy deck</button> <button class="button button-primary begin messy">Begin with Messy deck</button>
+    </div>
+    <div class="deck" style="display:none;">
     </div>
   </main>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

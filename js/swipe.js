@@ -22,7 +22,6 @@ var y = 0;
 
 $('.begin').click(function(){
   lockEl.requestPointerLock();
-
 });
 
 function updatePosition(e) {
@@ -59,7 +58,6 @@ function lockChangeAlert() {
       document.mozPointerLockElement === lockEl ||
       document.webkitPointerLockElement === lockEl ) {
     console.log('The pointer lock status is now locked');
-    init();
     document.addEventListener("mousemove", updatePosition, true);
   } else {
     console.log('The pointer lock status is now unlocked');

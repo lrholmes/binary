@@ -3,7 +3,7 @@ var breakTime = 800;
 
 $(document).ready(function() {
   // Map data to cards
-  init();
+  //init();
 
   var canvas = document.querySelector('canvas');
   var video = document.querySelector('video');

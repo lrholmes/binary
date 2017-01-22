@@ -7,31 +7,47 @@
   <title>Decisions</title>
   <link rel="stylesheet" href="/css/app.css">
 </head>
-<body>
+<body class="home">
   <header>
-    <a href="/"><img src="/img/logo4.png" alt="Binary"></a>
+      <a class="logo" href="/"><img src="/img/logo4.png" alt="Binary"></a>
+      <a class="wide-logo" href="/"><img src="/img/logo-wide.png" alt="Binary"></a>
   </header>
   <div class="tidy-container" style="display:none;">
     <button id="tidy-deck">Tidy Deck</button>
   </div>
 
   <main>
-    <p class="introduction">An exploration of the possible interactions for <b>Binary Decision Making</b> processes.</p>
-    <div class="messy-select">
-      <h5>Deck Type</h5>
-      <p>The card-based interface helps us to <b>concentrate</b> on the current decision at hand. Enable the <i>messy</i> deck type to become aware importance of this, as the cards become randomly scattered across the page.</p>
-      <span id="tidy" class="button">Tidy</span>
-      <!-- <div class="switch">
-        <input id="switch-1" type="checkbox" class="switch-input">
-        <label for="switch-1" class="switch-label">Switch</label>
-      </div> -->
-      <span id="messy" class="button">Messy</span>
+    <p class="introduction">An exploration of the possible interactions for <b class="highlighted">Binary Decision-making</b> processes.</p>
+
+    <div class="overview">
+      <h5 class="three columns">Decision-making, physicality & visual reduction</h5>
+      <p class="three columns">
+        When Tinder was released in 2012 it introduced a new style of interface, establishing a novel way to tackle the discovery experience of its dating platform. The card-based swiping interface put in place a methodology for making discovery structured, efficient and seemingly more meaningful. The interface has three key components - <b>binary decision-making</b> (swipe left or right), <b>physicality</b> (the swipe itself), and <b>visual reduction</b> (the way the cards look).
+      </p>
+      <p class="three columns">
+        <b>This work</b> is a response to Tinder and its interface, inviting you to explore how physicality and visual reduction affect the binary decision-making process. Eight unique interactions allow you to experience a variety of methods of engagement with binary decisions, providing an outlet for reflection upon how physicality affects the process. Consider, in comparison to interacting with abstract interface elements, how  physicality allows for <b>immersion</b> in the experience.
+      </p>
+      <p class="three columns">
+        Scroll down, browse and experiment with the interactions available. The card-based interface helps us to <b>concentrate</b> on the current decision at hand. Enable the <i>messy</i> deck type to become aware of the importance of this, as the cards become randomly scattered across the page.
+      </p>
     </div>
+
     <div class="grid">
+      <div class="three columns">
+        <h5>The interactions</h5>
+        <div class="messy-select">
+          <p><b>Deck Type</b></p>
+          <!-- <p>The card-based interface helps us to <b>concentrate</b> on the current decision at hand. Enable the <i>messy</i> deck type to become aware importance of this, as the cards become randomly scattered across the page.</p> -->
+          <span id="tidy" class="button">Tidy</span>
+
+          <span id="messy" class="button">Messy</span>
+        </div>
+      </div>
+      <div class="nine columns">
       <div class="item">
           <div class="inner">
             <div class="text">
-              <h2>Swipe</h2>
+              <h3>Swipe</h3>
               <p>Use your trackpad to make decisions with finger-based gestures.</p>
               <a class="button button-primary" href="/swipe/">Begin</a>
               <button data-modal="swipe" class="modal--button button">Video & Information</button>
@@ -41,7 +57,7 @@
       <div class="item">
           <div class="inner">
             <div class="text">
-              <h2>Voice</h2>
+              <h3>Voice</h3>
               <p>Use your voice and make decisions with words like 'yes' and 'no'.</p>
               <a class="button button-primary" href="/voice/">Begin</a>
               <button data-modal="voice" class="modal--button button">Video & Information</button>
@@ -51,7 +67,7 @@
       <div class="item">
           <div class="inner">
             <div class="text">
-              <h2>Hands</h2>
+              <h3>Hands</h3>
               <p>Use swiping motions with your hands to flick the cards towards your decision.</p>
               <a class="button button-primary" href="/hands/">Begin</a>
               <button data-modal="hands" class="modal--button button">Video & Information</button>
@@ -61,7 +77,7 @@
       <div class="item">
           <div class="inner">
             <div class="text">
-              <h2>Sway</h2>
+              <h3>Sway</h3>
               <p>Lean to indicate the direction you'd like the card to go.</p>
               <a class="button button-primary" href="/sway/">Begin</a>
               <button data-modal="sway" class="modal--button button">Video & Information</button>
@@ -71,7 +87,7 @@
       <div class="item">
         <div class="inner">
           <div class="text">
-            <h2>Head</h2>
+            <h3>Head</h3>
             <p>Use shaking and nodding gestures to make  your decision.</p>
             <a class="button button-primary" href="/head/">Begin</a>
             <button data-modal="head" class="modal--button button">Video & Information</button>
@@ -81,7 +97,7 @@
       <div class="item">
         <div class="inner">
           <div class="text">
-            <h2>Eyes</h2>
+            <h3>Eyes</h3>
             <p>Use your eyes to indicate the direction of the cards.</p>
             <a class="button button-primary" href="/eyes/">Begin</a>
             <button data-modal="eyes" class="modal--button button">Video & Information</button>
@@ -91,7 +107,7 @@
       <div class="item">
           <div class="inner">
             <div class="text">
-              <h2>Colour</h2>
+              <h3>Colour</h3>
               <p>Use green or red coloured objects to indicate your decision.</p>
               <a class="button button-primary" href="/colour/">Begin</a>
               <button data-modal="colour" class="modal--button button">Video & Information</button>
@@ -101,13 +117,21 @@
       <div class="item">
         <div class="inner">
           <div class="text">
-            <h2>Guitar</h2>
+            <h3>Guitar</h3>
             <p>Use the high and low notes on a guitar to make your decision.</p>
             <a class="button button-primary" href="/guitar/">Begin</a>
             <button data-modal="guitar" class="modal--button button">Video & Information</button>
           </div>
         </div>
       </div>
+      <!-- <div class="item">
+          <div class="inner">
+            <div class="text deck-type">
+              <h5>Deck Type</h5>
+              <span>Tidy</span><input type="checkbox"><span>Messy</span>
+            </div>
+          </div>
+      </div> -->
     </div>
   </main>
   <div id="modal" style="display:none;">
@@ -116,12 +140,13 @@
     <div class="modal--button" id="next"><h5></h5></div>
     <div class="modal--inner">
       <span id="counter"></span>
-      <h2 id="modal--title">Swipe</h2>
+      <h3 id="modal--title">Swipe</h3>
       <video controls id="modal--video" src=""></video>
       <p id="modal--description">
         This interaction aims to provide context to the audience by closely replicating the Tinder swiping experience. This is achieved by replacing the mouse cursor functionality with direct control of the cards, so as a user moves their finger on the computer’s trackpad, this movement is emulated on-screen. Once the user passes the card past the left or right threshold, it will continue to be dismissed off-screen in that direction. Despite not having the visual finger-to-element connection that a touchscreen enables, this interaction does work to provide a simple application of Mine’s concept - removing the need to interact with abstract interface elements can increase the sense of immersion.
       </p>
     </div>
+  </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="/js/app.js"></script>
