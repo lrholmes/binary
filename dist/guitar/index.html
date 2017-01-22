@@ -7,16 +7,23 @@
   <title>Decisions</title>
   <link rel="stylesheet" href="/css/app.css">
 </head>
-<body>
+<body class="@@class">
   <header>
-    <a href="/"><img src="/img/logo4.png" alt="Binary"></a>
+      <a class="logo" href="/"><img src="/img/logo4.png" alt="Binary"></a>
+      <a class="wide-logo" href="/"><img src="/img/logo-wide.png" alt="Binary"></a>
   </header>
   <div class="tidy-container" style="display:none;">
     <button id="tidy-deck">Tidy Deck</button>
   </div>
 
   <main>
-    <div class="deck">
+    <div class="pre-info">
+      <h3>Guitar</h3>
+      <p>Grab your guitar and make sure it's tuned to Standard. Pluck the low E for a swipe left, and the high E for a swipe right.</p>
+      <p>Click on a button below to begin.</p>
+      <button class="button button-primary begin tidy">Begin with tidy deck</button> <button class="button button-primary begin messy">Begin with Messy deck</button>
+    </div>
+    <div class="deck" style="display:none;">
     </div>
     <div style="display:none;" class="information">
       <span id="play-note"></span>

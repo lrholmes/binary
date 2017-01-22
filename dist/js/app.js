@@ -137,6 +137,14 @@ $('#dismiss').click(function(){
   $('#modal').fadeOut(400);
 });
 
+$('.begin.tidy').click(function(){
+  init();
+});
+
+$('.begin.messy').click(function(){
+  init(true);
+});
+
 // Triggered by voice command, will send a card left or right
 function swipe(direction, needsReady) {
   var $card = $('.card:last-child');

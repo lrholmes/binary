@@ -3,7 +3,7 @@ var fruits = ['Bananas', 'Apples', 'Oranges', 'Raisins', 'Grapes'];
 
 $(document).ready(function() {
   // Map data to cards
-  init();
+
 });
 
 

@@ -4,7 +4,7 @@
 $(document).ready(function() {
   // Map data to cards
 
-  init(true);
+  //init(true);
   recognition.start();
 });
 

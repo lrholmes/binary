@@ -4,7 +4,7 @@ var fruits = ['Bananas', 'Apples', 'Oranges', 'Raisins', 'Grapes'];
 stopTracking(3000);
 
 $(document).ready(function() {
-  init();
+  //init();
 });
 
 

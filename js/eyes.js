@@ -4,10 +4,12 @@ var clicks = 0;
 var docWidth = $(document).width();
 
 $(document).click(function() {
-  clicks++;
-  $('#click-count').text(clicks);
-  if (clicks === 5) {
-    init();
+  if (clicks > 3) {
+    $('#click-count').text('5');
+    $('.buttons').fadeIn('400');
+  } else {
+    clicks++;
+    $('#click-count').text(clicks);
   }
 });
 

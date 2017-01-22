@@ -74,7 +74,8 @@ $('video').click(function(e){
 
     tracking.track('#vid', colours, {camera:true});
     $('video').appendTo('body').addClass('float');
-    init();
+    //init();
+    $('.buttons').fadeIn('400');
   } else {
     // it is false, so get green
     green = {

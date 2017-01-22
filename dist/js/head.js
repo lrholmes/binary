@@ -1,13 +1,8 @@
 // Sample Data
-var fruits = ['Bananas', 'Apples', 'Oranges', 'Raisins', 'Grapes'];
 var y, initY;
-$(document).click(function(){
-console.log(y, initY);
-});
 
 $(document).ready(function() {
   // Map data to cards
-  init();
 
   var canvas = document.querySelector('canvas');
   var video = document.querySelector('video');

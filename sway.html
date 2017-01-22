@@ -1,6 +1,11 @@
 @@include('./layout/top.html')
   <main class="swipe">
-    <div class="deck">
+    <div class="pre-info">
+      <h3>Sway</h3>
+      <p>Click on a button below to begin. Lean from side to side to indicate the direction of the card.</p>
+      <button class="button button-primary begin tidy">Begin with tidy deck</button> <button class="button button-primary begin messy">Begin with Messy deck</button>
+    </div>
+    <div class="deck" style="display:none;">
     </div>
     <video style="display:none;" id="vid"></video>
     <canvas id="c"></canvas>
